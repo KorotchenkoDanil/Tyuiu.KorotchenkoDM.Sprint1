@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.KorotchenkoDM.Sprint1.Task3.V19.Lib;
+using Tyuiu.KorotchenkoDM.Sprint1.Task4.V11.Lib;
 
-namespace Tyuiu.KorotchenkoDM.Sprint1.Task3.V19
+namespace Tyuiu.KorotchenkoDM.Sprint1.Task4.V11
 {
     class Program
     {
@@ -14,27 +14,32 @@ namespace Tyuiu.KorotchenkoDM.Sprint1.Task3.V19
             Console.Title = "Спринт #1 | Выполнил: Коротченко Д. М. | ИСТНб-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #1                                                               *");
-            Console.WriteLine("* Тема: Операторы составного присваивания                                 *");
-            Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #19                                                             *");
+            Console.WriteLine("* Тема: Class Math                                                        *");
+            Console.WriteLine("* Задание #4                                                              *");
+            Console.WriteLine("* Вариант #11                                                             *");
             Console.WriteLine("* Выполнил: Коротченко Данил Михайлович | ИСТНб-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
-            Console.WriteLine("* выполняет указанные расчеты и печатает результат на экране              *");
-            Console.WriteLine("\n* Расчеты: Написать программу, которая печатает true или false            *");
-            Console.WriteLine("* в зависимости от того, может ли шахматная фигура <<Слон>> с одного      *");
-            Console.WriteLine("* заданного поля шахматной доски перейти за один ход на другое.           *");
-            Console.WriteLine("* Пользователь задает координаты двух ячеек шахматной доски (х1 и у1,     *");
-            Console.WriteLine("* х2 и у2, каждое в диапазоне от 1 до 8)                                  *");
+            Console.WriteLine("* вычисляет результат по формуле и печатает его на экране. Ответ          *");
+            Console.WriteLine("* округлите до 3 знаков после запятой                                     *");
+            Console.WriteLine("\n* Формула: arctgx/e^y                                                     *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
+            Console.WriteLine("Введите x:                                                                 ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите y:                                                                 ");
+            double y = Convert.ToDouble(Console.ReadLine());
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
+
+            DataService ds = new DataService();
+            Console.WriteLine("arctgx/e^y = " + ds.Calculate(x, y));
 
             Console.ReadKey();
         }
